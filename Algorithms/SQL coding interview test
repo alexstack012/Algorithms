@@ -1,0 +1,11 @@
+SELECT department.dept_id, count(employee.emp_id) AS count, sum(employee.salary) AS sum_of_salary 
+-- selecting from the table department column dept_id. built-in function count to count from employee 
+-- table column employee id. then add from the employee table column salaray with the built-in function sum
+-- as the new variable "sum_of_salary"
+FROM department, employee
+--look at the tables department and employee
+WHERE department.dept_id = employee.dept_id
+--look at the table department at column dept id and table employee at column dept id
+group by department.dept_id
+order by department.dept_id;
+--then group and order them the dept id
